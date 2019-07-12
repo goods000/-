@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>我的</title>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/public.js"></script>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<style>
+		.bottom_nav dl dd:nth-child(5) a .dier {
+			display: block !important;
+		}
+		.bottom_nav dl dd:nth-child(5) a .diyi {
+			display: none !important;
+		}
+		.bottom_nav dl dd:nth-child(5) a span {
+			color: #FF7918;
+		}
+		.touImg{border: 1px solid #FA8026;background: #FF7918;width: 55px;height: 55px;border-radius: 30px;margin-left: 15px;}
+	</style>
+
+	<body style="background-color: #f6f6f6;">
+		<!--头部-->
+		<div>
+			<div id="geHeader">
+				<p>个人中心</p>
+				<div id="geNews" style="background: url(img/geHeader.png) no-repeat;background-size:100% 100% ; height: 100px;margin-top: 48px;">
+					<div class="ge_top">
+						<div class="name_top">
+						<div class="right">
+							<div id="xmTanDiv_1" class="touImg">
+	                         	<input type="hidden" id="uploadOrderid" name="id" value="">
+	                            <input type="file" name="file1" id="xdaTanFileImg_1" style="width: 55px; height: 50px;opacity:0;position:absolute;z-index:2;" onchange="xmTanUploadImg_1(this)" accept="image/*"/>
+	                         	<i style="border-radius: 50px;position:absolute;top:55px;left:30px;width: 60px; height: 60px;overflow:hidden;z-index:1;">
+	                         		<img style="width: 100%;height: 100%;display:block;" id="xmTanImg_1"/>
+	                         	</i>
+                        	</div>
+                        	<div class="ni">
+                        		<span>小姐姐</span>
+                        		<span>ID:5555555555</span>
+                        	</div>
+						</div>
+						<a href="zhuan.html" class="left">
+							<img src="img/zhuanImg.png" class="left_img"/>
+							<span class="left_tile">
+								转账
+							</span>
+						</a>
+					</div>
+					
+					<div class="name_right">
+						<ul>
+							<li>
+								<a class="right_img">
+									<span class="ge_title">3</span>
+									<span class="right_title">
+										总资产
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="USDT.html" class="right_img">
+									<span class="ge_title">99</span>
+									<span class="right_title">
+										USDT
+									</span>
+								</a>
+							</li>
+							<li>
+								<a class="right_img">
+									<span class="ge_title">3</span>
+									<span class="right_title">
+										活期钱包
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="qrcode.html" class="right_img">
+									<img src="img/qr.png" class="ge_img" />
+									<span class="right_title">
+										邀请好友
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="team.html" class="right_img">
+									<img src="img/team.png" class="ge_img" />
+									<span class="right_title">
+										我的团队
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="myBark.html" class="right_img">
+									<img src="img/bark.png" class="ge_img" />
+									<span class="right_title">
+										银行卡管理
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--订单-->
+		<div class="ge_tab">
+			<a href="order.html?type=1">
+				<div id="ge_middle">
+					<span class="weng">
+						我的订单
+					</span>
+					<span class="kan">
+						查看全部订单
+						<img src="img/next.png" class="kan_img"/>
+					</span>
+				</div>
+			</a>	
+		<div class="ge_nav">
+			<a href="order.html?type=2" class="tups">
+				<img src="img/fukuan.png" class="tups_img"/>
+				<span class="tups_title">
+					待付款
+				</span>
+			</a>
+			<a href="order.html?type=3" class="tups">
+				<img src="img/fahuo.png" class="tups_img"/>
+				<span class="tups_title">
+					待发货
+				</span>
+			</a>
+			<a href="order.html?type=4" class="tups">
+				<img src="img/order.png" class="tups_img"/>
+				<span class="tups_title">
+					待收货
+				</span>
+			</a>
+			<a href="order.html?type=5" class="tups">
+				<img src="img/afterSale.png" class="tups_img"/>
+				<span class="tups_title">
+					售后
+				</span>
+			</a>
+		</div>
+		</div>
+	
+		<div class="ge_list">
+			<a href="guamai_jy.html" href="yong_record.html" class="list">
+				<div class="list_left">
+					<img src="img/guamai.png" class="tups_img"/>
+					<span class="zi">
+						交易挂卖
+					</span>
+				</div>
+				<img src="img/next.png" class="next_img"/>
+			</a>
+			<a href="li_record.html" href="yong_record.html" class="list">
+				<div class="list_left">
+					<img src="img/zd.png" class="tups_img"/>
+					<span class="zi">
+						历史账单
+					</span>
+				</div>
+				<img src="img/next.png" class="next_img"/>
+			</a>
+			<a href="grzl.html" class="list">
+				<div class="list_left">
+					<img src="img/ziliao.png" class="tups_img"/>
+					<span class="zi">
+						个人设置
+					</span>
+				</div>
+				<img src="img/next.png" class="next_img"/>
+			</a>
+			<a href="address.html" class="list">
+				<div class="list_left">
+					<img src="img/address.png" class="tups_img"/>
+					<span class="zi">
+						收货地址
+					</span>
+				</div>
+				<img src="img/next.png" class="next_img"/>
+			</a>
+			<a href="opinion.html" class="list">
+				<div class="list_left">
+					<img src="img/yijan.png" class="tups_img"/>
+					<span class="zi">
+						意见反馈
+					</span>
+				</div>
+				<img src="img/next.png" class="next_img"/>
+			</a>
+			<!--<a href="notice.html" class="list">
+				<div class="list_left">
+					<img src="img/gong.png" class="tups_img"/>
+					<span class="zi">
+						公告列表
+					</span>
+				</div>
+				<img src="img/next.png" class="next_img"/>
+			</a>-->
+		</div>
+		
+		<!--退出登录按钮-->
+		<div id="ge_btn">
+			<input type="button" class="tuichu" value="退出登录" />
+		</div>
+		
+		<!--底部导航栏-->
+		<div id="footer"></div>
+	</body>
+	<script>
+		function xmTanUploadImg_1(obj) {
+        var file = obj.files[0];
+		console.log(obj);console.log(file);
+		console.log("file.size = " + file.size); //file.size 单位为byte
+		var reader = new FileReader();
+		//读取文件过程方法
+		reader.onloadstart = function (e) {
+		console.log("开始读取....");
+		}
+		reader.onprogress = function (e) {
+		console.log("正在读取中....");
+		}
+		reader.onabort = function (e) {
+		console.log("中断读取....");
+		}
+		reader.onerror = function (e) {
+		console.log("读取异常....");
+		}
+		reader.onload = function (e) {
+		console.log("成功读取....");
+		var size = file.size/1024;
+		var size = size/1024;
+		if (size>4) {
+		alert('上传图片不能超过4MB，请重新选择!');return false;
+		}
+		var img = document.getElementById("xmTanImg_1");
+		img.src = e.target.result;
+		//或者 img.src = this.result; //e.target == this
+		}
+		reader.readAsDataURL(file)
+		}
+	</script>
+</html>

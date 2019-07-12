@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title>订单详情</title>
+		<script src="js/jquery.js"></script>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/font.css" />
+	</head>
+	<style>
+		.goods {display: flex;flex-direction: column;padding: 0px 10px;justify-content: space-around;}
+		.shangPing {display: flex;padding: 10px 0px;background: #fff;}
+		.img_left {margin-left: 15px;width: 25%;height: 25%;border-radius: 5px;}
+		.img_right {padding-right: 15px;}
+		.souFan {position: absolute;bottom: 15px;}
+		.sreachImg {width: 25px;height: 25px;position: absolute;left: 60px;}
+		#sreach {width: 60% !important;}
+		.yu {color: #FFFFFF;background: #980000;border-radius: 3px;padding: 0px 3px;}
+		/*.yi {margin-top: 40px;}*/
+		.price_btn1 {color: #ed5252;border: 1px solid #ed5252;font-size: 15px;border-radius: 3px;padding: 0px 6px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+		.o_price {color: #FFA232;font-weight: bold;font-size: 16px;}
+		.o_price b {font-size: 10px;color: #FFA232;}
+		.qian {display: flex;justify-content: space-between;align-items: center;}
+		.tups_img {width: 30px;height: 30px;}
+		.di {border-top: 1px solid #DBDBDB;background-color: #fff;display: flex;justify-content: space-between;align-items: center;padding: 20px 0px 20px;position: fixed;bottom: 0px;width: 100%;}
+		#di_right {margin-left: 20px;}
+		#jie {margin-right: 20px;}
+		.jieTitle {color: #FFFFFF;font-size: 16px;padding: 5px 40px;background: #0F6518;border-radius: 3px;}
+		.li_sc p {text-overflow: ellipsis;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;overflow: hidden;}
+		.beiBox {background: #FFFFFF;padding: 10px 15px;margin-top:0px;border-bottom: 1px solid #EEEEEE;}
+		.bei {border: 0px;border-radius: 5px;margin: 5px 0px 5px 0px;}
+		#td {display: flex;justify-content: center;border: 1px solid #0F6518;border-radius: 5px;padding: 5px 0px;color: #0F6518;margin-top: 10px;}
+		#zf {overflow: hidden;padding: 10px;display: none;}
+		label {font-size: 14px;color: #333;}
+		.mi {padding: 10px 10px;border: 1px solid #EEEEEE;border-radius: 5px;margin: 5px 0px 15px 0px;}
+		.wl{padding:10px 0px 10px 0px;background: #FFFFFF;}
+		.wl p{padding-left: 40px;width: 80%;}
+		.wl p span{padding-left: 10px;}
+		.li_sc p span{font-size: 15px;}
+	</style>
+
+	<body style="background: #f5f5f5;">
+		<h1 class="h1"><button class="iconfont icon-xiangzuo1" onclick="javascript:window.history.back(-1);"></button>订单详情</h1>
+		<div class="jsxx gt">
+			<ul>
+				<!--<a href="address.html">
+					<li class="li_sc">
+						<i>收货人：少林佛祖威少</i><em>1383838438</em>
+						<p style="color: #999;width: 300px;">广东省深圳市龙华区</p>
+					</li>
+				</a>	-->
+				<a href="address.html">
+					<li class="li_sc">
+						<p style="text-align: center;">
+							<img src="img/dizhi.png" class="di_img"/>
+							<span>尚未设置收货信息，<span class="order_price">添加收货地址</span></span>
+						</p>
+					</li>
+				</a>	
+			</ul>
+
+			<div class="shangPing">
+				<img src="img/goos.png" class="goods_img img_left" />
+				<div class="goods img_right">
+					<p class="goods_title">春夏季中长群黑色领长荷叶袖边收腰显瘦大摆网纱裙子春夏季中长群黑色领长荷叶袖边收腰显瘦大摆网纱裙子春夏季中长群黑色领长荷叶袖边收腰显瘦大摆网纱裙子</p>
+					<div class="qian">
+						<span class="o_price">
+								<b>￥</b>138
+							</span>
+						<span class="sl">
+								×1
+							</span>
+					</div>
+				</div>
+			</div>
+			<div class="shangPing">
+				<img src="img/goos.png" class="goods_img img_left" />
+				<div class="goods img_right">
+					<p class="goods_title">春夏季中长群黑色领长荷叶袖边收腰显瘦大摆网纱裙子</p>
+					<div class="qian">
+						<span class="o_price">
+								<b>￥</b>138
+							</span>
+						<span class="sl">
+								×1
+							</span>
+					</div>
+				</div>
+			</div>
+			<div class="beiBox">
+				<span>商家支持7天无理由退货</span>
+			</div>
+			<div class="beiBox">
+				<span>配送方式</span>
+				<span>顺便</span>
+			</div>
+			<div class="beiBox">
+				<span>买家留言  : </span>
+				<input type="text" placeholder="留言" class="bei" name="" id="" value="" />
+			</div>
+			
+			<div class="gj">
+				<span class="gj_title gj_s">共2件商品</span>
+				<div class="gong">
+					<span class="gj_title">共计:</span><span class="o_price">99.00</span>
+				</div>
+			</div>
+			
+			<div class="o_di">
+				<span class="gj_title">用积分抵扣</span>
+				<input class='switch-component' type='checkbox'>
+			</div>
+
+			<div class="gj1">
+				<span class="gj_title">共计金额:</span><span class="o_price">99.00</span>
+					<div class="tj">
+						提交订单
+					</div>
+			</div>
+			
+		</div>
+
+	</body>
+	<script>
+		var toggle = true;
+		$(".list").each(function() {
+			$(this).find("img").click(function() {
+				if(toggle) {
+					$(this).attr("src", "img/choice.png").parent().siblings().find(".choice_img").attr("src", "img/noChoice.png")
+					toggle = false;
+				} else {
+					$(this).attr("src", "img/Choice.png").parent().siblings().find(".choice_img").attr("src", "img/noChoice.png")
+					toggle = true;
+				}
+			});
+		});
+	</script>
+
+</html>

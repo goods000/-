@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title>交易记录</title>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<link rel="stylesheet" href="css/style.css" />
+    	<link rel="stylesheet" href="css/font.css" />
+	</head>
+	<style>
+		#nav { width: 100%;position: relative;left: 50%;margin-left: -50%;background: #fff;}
+        #nav ul{display: flex;flex-direction: row;white-space: nowrap;overflow: scroll;}
+        #nav ul li { width: 40%;height: 51px; float: left;  list-style: none;padding: 0px 15px;}
+        .navContent {padding: 10px 0px;display: block; text-align: center;line-height: 30px; color: #666;font-size: 16px;}
+        .navTitle span {  color: #FFA232;font-size: 16px;border-bottom: 2px solid #FFA232;}
+        .navTitle {display: block;  text-align: center;line-height: 30px; }
+        .two {display: none;}
+	</style>
+	<body style="background: #f5f5f5;">
+		<!--头部标题-->
+		<h1 class="h1">
+			<button class="iconfont icon-xiangzuo1" onclick="javascript:window.history.back(-1);"></button>
+			交易记录
+		</h1>
+		<div style="margin-top: 45px;">
+			<div id="nav">
+	           	<ul class="catalog">
+					<li class="navTitle"><span class="navContent ">购买记录</span></li>
+					<li><span class="navContent">卖出记录</span></li>
+				</ul>
+			</div>
+			<div class="tab">
+				<div class="guaBox">
+					<div class="guaBox_box">
+						<div class="guaBox_bt">
+							<span>ID:1234567</span>
+							<span>
+								<img src="img/time.png" class="dian_img"/>
+									<span>2019-09-22 19:09:00</span>
+							</span>
+						</div>
+						<div class="j_sl">
+							<div class="j_zi">
+								<div class="j_sb">
+									<p>单价</p>
+									<p class="g">22.22</p>
+								</div>
+								<div class="j_sb">
+									<p>数量</p>
+									<p class="g">22.22</p>
+								</div>
+								<div class="j_sb">
+									<p>总价</p>
+									<p class="g">22.22</p>
+								</div>
+							</div>
+						</div>
+						<div class="gua_top1">
+							<span class="bh">订单号:0000000</span>
+							<div class="o_btn">
+								<div class="gua_btn1">
+									待买家发货
+								</div>
+								<a href="order_pz.html">
+									<div class="gua_btn">
+										查看详情
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					
+					<div class="guaBox_box">
+						<div class="guaBox_bt">
+							<span>ID:1234567</span>
+							<span>
+								<img src="img/time.png" class="dian_img"/>
+									<span>2019-09-22 19:09:00</span>
+							</span>
+						</div>
+						<div class="j_sl">
+							<div class="j_zi">
+								<div class="j_sb">
+									<p>单价</p>
+									<p class="g">22.22</p>
+								</div>
+								<div class="j_sb">
+									<p>数量</p>
+									<p class="g">22.22</p>
+								</div>
+								<div class="j_sb">
+									<p>总价</p>
+									<p class="g">22.22</p>
+								</div>
+							</div>
+						</div>
+						<div class="gua_top1">
+							<span class="bh">订单号:0000000</span>
+							<div class="o_btn">
+								<div class="gua_btn1">
+									待买家发货
+								</div>
+								<a href="order_pz.html">
+									<div class="gua_btn">
+										查看详情
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				<div class="guaBox two">
+					<div class="guaBox_box">
+						<div class="guaBox_bt">
+							<span>ID:1234567</span>
+							<span>
+								<img src="img/time.png" class="dian_img"/>
+									<span>2019-09-22 19:09:00</span>
+							</span>
+						</div>
+						<div class="j_sl">
+							<div class="j_zi">
+								<div class="j_sb">
+									<p>单价</p>
+									<p class="g">22.22</p>
+								</div>
+								<div class="j_sb">
+									<p>数量</p>
+									<p class="g">22.22</p>
+								</div>
+								<div class="j_sb">
+									<p>总价</p>
+									<p class="g">22.22</p>
+								</div>
+							</div>
+						</div>
+						<div class="gua_top1">
+							<span class="bh">订单号:0000000</span>
+							<div class="o_btn">
+								<div class="gua_btn1">
+									待上传凭证
+								</div>
+								<a href="order_pz1.html">
+									<div class="gua_btn">
+										查看详情
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+			
+		</div>	
+	</body>
+	<script>
+		
+		/*删除*/
+		$(".g_btn3").click(function(){
+			$(this).parent().parent().remove();
+		})
+		
+		var $div_li = $('#nav ul li');
+        $('#nav ul li').click(function(){
+            $(this).addClass("navTitle").siblings().removeClass("navTitle"); 
+                var index =  $div_li.index(this);  
+            $("div.tab > div").eq(index).show().siblings().hide(); 
+		})
+	</script>
+</html>

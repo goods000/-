@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title>商品管理</title>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<link rel="stylesheet" href="css/style.css" />
+    	<link rel="stylesheet" href="css/font.css" />
+	</head>
+	<style>
+		#nav { width: 100%;position: relative;left: 50%;margin-left: -50%;background: #fff;}
+        #nav ul{display: flex;flex-direction: row;white-space: nowrap;overflow: scroll;}
+        #nav ul li { width: 40%;height: 51px; float: left;  list-style: none;padding: 0px 15px;}
+        .navContent {padding: 10px 0px;display: block; text-align: center;line-height: 30px; color: #666;font-size: 16px;}
+        .navTitle span {  color: #FFA232;font-size: 16px;border-bottom: 1px solid #FFA232;}
+        .navTitle {display: block;  text-align: center;line-height: 30px; }
+        .two {display: none;}
+	</style>
+	<body style="background: #f5f5f5;">
+		<!--头部标题-->
+		<h1 class="h1">
+			<button class="iconfont icon-xiangzuo1" onclick="javascript:window.history.back(-1);"></button>
+			商品管理
+			<a href="goods_bian.html" class="headerRight">添加商品</a>
+		</h1>
+		<div style="margin-top: 45px;">
+			<div id="nav">
+	           	<ul class="catalog">
+					<li class="navTitle"><span class="navContent ">在售商品(12)</span></li>
+					<li><span class="navContent">下架商品(12)</span></li>
+					<li><span class="navContent">审核商品(12)</span></li>
+				</ul>
+			</div>
+			<div class="tab">
+				<div class="good">
+					<div class="sreach1">
+						<div class="sreach">
+							<div class="sreach_left">
+								<img src="img/sreach.png" class="indexLeftImg" style="padding-top: 5px;"/>
+								<input type="text" placeholder="输入关键词搜索商品" class="g_p" name="" id="" value="" />
+							</div>
+							<div class="sreach_right">
+								<span>搜索</span>
+							</div>
+						</div>
+					</div>
+					<div class="">
+						<div class="shangPing" style="padding: 10px 0px 0px 0px;">
+							<img src="img/goos.png" class="goods_img img_left" style="margin: 0px 15px;"/>
+							<div class="goods img_right">
+								<p class="goods_title">春夏季中裙子春夏季中长群黑色领长荷叶袖边收腰显瘦大摆网纱裙子</p>
+								<div class="qian">
+									<span class="o_price">
+											<b>￥</b>138
+										</span>
+								</div>
+								<div class="k_title">
+									<span>已售200</span>
+									<span>库存1200</span>
+								</div>
+							</div>
+						</div>
+						<div class="g_xb">
+							<a href="goods_bian.html">
+								<div class="g_btn">
+									<span class="g_tpye">编辑</span>
+									<img src="img/bian.png" class="dian_img"/>
+								</div>
+							</a>
+							<div class="g_btn2">
+								<span class="g_tpye">下架</span>
+								<img src="img/xia.png" class="dian_img"/>
+							</div>
+							<div class="g_btn3">
+								<span class="g_tpye">删除</span>
+								<img src="img/shan.png" class="dian_img"/>
+							</div>
+						</div>
+					</div>
+					<div class="">
+						<div class="shangPing" style="padding: 10px 0px 0px 0px;">
+							<img src="img/goos.png" class="goods_img img_left" style="margin: 0px 15px;"/>
+							<div class="goods img_right">
+								<p class="goods_title">春夏季中裙子春夏季中长群黑色领长荷叶袖边收腰显瘦大摆网纱裙子</p>
+								<div class="qian">
+									<span class="o_price">
+											<b>￥</b>999
+										</span>
+								</div>
+								<div class="k_title">
+									<span>已售222</span>
+									<span>库存1222</span>
+								</div>
+							</div>
+						</div>
+						<div class="g_xb">
+							<a href="goods_bian.html">
+								<div class="g_btn">
+									<span class="g_tpye">编辑</span>
+									<img src="img/bian.png" class="dian_img"/>
+								</div>
+							</a>
+							<div class="g_btn2">
+								<span class="g_tpye">下架</span>
+								<img src="img/xia.png" class="dian_img"/>
+							</div>
+							<div class="g_btn3">
+								<span class="g_tpye">删除</span>
+								<img src="img/shan.png" class="dian_img"/>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+				<div class="good two">
+					<div class="sreach1">
+						<div class="sreach">
+							<div class="sreach_left">
+								<img src="img/sreach.png" class="indexLeftImg" style="padding-top: 5px;"/>
+								<input type="text" placeholder="输入关键词搜索商品" class="g_p" name="" id="" value="" />
+							</div>
+							<div class="sreach_right">
+								<span>搜索</span>
+							</div>
+						</div>
+					</div>
+					<div class="">
+						<div class="g_boxImg">
+							<span class="hong_title">已下架</span>
+							<img src="img/jia.png" class="g_img"/>
+						</div>
+						<div class="shangPing" style="padding: 10px 0px 0px 0px;">
+							<img src="img/goos.png" class="goods_img img_left" style="margin: 0px 15px;"/>
+							<div class="goods img_right">
+								<p class="goods_title" style="padding-right: 35px;">春夏季中裙子春夏季中长群黑色领长荷叶袖边收腰显瘦大摆网纱裙子</p>
+								<div class="qian">
+									<span class="o_price">
+											<b>￥</b>99
+										</span>
+								</div>
+								<div class="k_title">
+									<span>已售29</span>
+									<span>库存555</span>
+								</div>
+							</div>
+						</div>
+						<div class="g_xb">
+							<a href="goods_bian.html">
+								<div class="g_btn">
+									<span class="g_tpye">编辑</span>
+									<img src="img/bian.png" class="dian_img"/>
+								</div>
+							</a>
+							<div class="g_btn2">
+								<span class="g_tpye">上架</span>
+								<img src="img/shangj.png" class="dian_img"/>
+							</div>
+							<div class="g_btn3">
+								<span class="g_tpye">删除</span>
+								<img src="img/shan.png" class="dian_img"/>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+				<div class="good two">
+					<div class="sreach1">
+						<div class="sreach">
+							<div class="sreach_left">
+								<img src="img/sreach.png" class="indexLeftImg" style="padding-top: 5px;"/>
+								<input type="text" placeholder="输入关键词搜索商品" class="g_p" name="" id="" value="" />
+							</div>
+							<div class="sreach_right">
+								<span>搜索</span>
+							</div>
+						</div>
+					</div>
+					<div class="">
+						<div class="g_boxImg">
+							<span class="hong_title">审核中</span>
+							<img src="img/jia.png" class="g_img"/>
+						</div>
+						<div class="shangPing" style="padding: 10px 0px 0px 0px;">
+							<img src="img/goos.png" class="goods_img img_left" style="margin: 0px 15px;"/>
+							<div class="goods img_right">
+								<p class="goods_title" style="padding-right: 35px;">春夏季中裙子春夏季中长群黑色领长荷叶袖边收腰显瘦大摆网纱裙子</p>
+								<div class="qian">
+									<span class="o_price">
+											<b>￥</b>888
+										</span>
+								</div>
+								<div class="k_title">
+									<span>已售88</span>
+									<span>库存8888</span>
+								</div>
+							</div>
+						</div>
+						<div class="g_xb">
+							<a href="goods_bian.html">
+								<div class="g_btn">
+									<span class="g_tpye">编辑</span>
+									<img src="img/bian.png" class="dian_img"/>
+								</div>
+							</a>
+							<div class="g_btn3">
+								<span class="g_tpye">删除</span>
+								<img src="img/shan.png" class="dian_img"/>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>	
+	</body>
+	<script>
+		var url =location.href;         //获取url
+        var typeNum=url.split('?')[1].split("=")[1];     //截取链接后type的值
+         $.each($('.catalog li'),function (i) {
+             $('.catalog li').eq(typeNum-1).addClass('navTitle').siblings().removeClass('navTitle');    //B页面tab选中样式
+             $('.tab .good').eq(typeNum-1).show().siblings().hide();  //B页面tab对应内容选中样式
+         });		
+		
+		/*删除*/
+		$(".g_btn3").click(function(){
+			$(this).parent().parent().remove();
+		})
+		
+		var $div_li = $('#nav ul li');
+        $('#nav ul li').click(function(){
+            $(this).addClass("navTitle").siblings().removeClass("navTitle");
+            var index =  $div_li.index(this);
+            $("div.tab > div").eq(index).show().siblings().hide();
+        })
+	</script>
+</html>

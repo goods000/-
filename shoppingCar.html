@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<title>购物车</title>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/public.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	    <link rel="stylesheet" href="css/font.css" />
+	</head>
+	<style>
+		.bottom_nav dl dd:nth-child(4) a .dier {
+			display: block !important;
+		}
+		
+		.bottom_nav dl dd:nth-child(4) a .diyi {
+			display: none !important;
+		}
+		
+		.bottom_nav dl dd:nth-child(4) a span {
+			color: #FF7918;
+		}
+		
+		#headerTitle {
+			text-align: center;
+		}
+		.no{display: none;}
+	</style>
+	<body>
+		<!--头部标题-->
+		 <header>
+	    	购物车
+	    	<!--<span class="fr" style="font-size: 12px;">编辑</span>-->
+	    </header>
+	    <!--头部-->
+	    <div style="width: 100%; height: 60px;padding-top: 100px;" class="b"></div>
+
+	    <!--主题-->
+	    <div class="no">
+	    	<p>暂无数据，快去逛逛吧！</p>
+	    </div>
+	    <div class="con gt">	
+	    <div class="content">
+		    <ul ind="0">
+		    	<a href="order_details.html"><li class="clearfix">
+		    		<div class="label fl">
+		    			<label>
+			    			<input type="checkbox" class="zhi"/>
+			    			<img src="img/noChoice.png"/>
+			    		</label>
+		    		</div>
+		    		<div class="img">
+		    			<img src="img/goos.png"/>
+		    		</div>
+		    		<div class="text fl">
+		    			<div class="wek">
+		    				<p class="overflow">通过不透明度的变化通过不透明度的变化通过不透明度的变化</p>
+		    				<i class="delete iconfont icon-shanchu"></i>
+		    			</div>
+		    			<p class="clearfix">
+		    				<span class="fl red">￥ 119</span>
+		    				<span class="fr xt">
+		    					<input type="button" value="-" class="btn1" />
+		    					<span class="number">1</span>
+		    					<input type="button" value="+"  class="btn2"/>
+		    				</span>
+		    			</p>
+		    		</div>
+		    	</li></a>
+		   		<li class="clearfix">
+		    		<div class="label fl">
+		    			<label>
+			    			<input type="checkbox" class="zhi"/>
+			    			<img src="img/noChoice.png"/>
+			    		</label>
+		    		</div>
+		    		<div class="img fl">
+		    			<img src="img/goos.png"/>
+		    		</div>
+		    		<div class="text fl">
+		    			<div class="wek">
+		    				<p class="overflow">通过不透明度的变化通过不透明度的变化通过不透明度的变化</p>
+		    				<i class="delete iconfont icon-shanchu"></i>
+		    			</div>
+		    			<p class="clearfix">
+		    				<span class="fl red">￥ 140</span>
+		    				<span class="fr xt">
+		    					<input type="button" value="-" class="btn1" />
+		    					<span class="number">3</span>
+		    					<input type="button" value="+"  class="btn2"/>
+		    				</span>
+		    			</p>
+		    		</div>
+		    	</li>
+		    	<li class="clearfix">
+		    		<div class="label fl">
+		    			<label>
+			    			<input type="checkbox" class="zhi"/>
+			    			<img src="img/noChoice.png"/>
+			    		</label>
+		    		</div>
+		    		<div class="img fl">
+		    			<img src="img/goos.png"/>
+		    		</div>
+		    		<div class="text fl">
+		    			<div class="wek">
+		    				<p class="overflow">通过不透明度的变化通过不透明度的变化通过不透明度的变化</p>
+		    				<i class="delete iconfont icon-shanchu"></i>
+		    			</div>
+		    			<p class="clearfix">
+		    				<span class="fl red">￥ 130</span>
+		    				<span class="fr xt">
+		    					<input type="button" value="-" class="btn1"/>
+		    					<span class="number">5</span>
+		    					<input type="button" value="+" class="btn2"/>
+		    				</span>
+		    			</p>
+		    		</div>
+		    	</li>
+		    </ul>
+		    <p class="total">一共<number></number>件商品：<span></span></p>
+	    </div>
+	    
+	    </div>
+	    <!--主题-->
+	    <!--结算-->
+	    <div class="bottom fixed">
+	    	<div class="fl bottom-label">
+	    		<label class="xq">
+	    			<input type="checkbox" checked="checked"/>
+	    			<img src="img/noChoice.png" class="fl" />
+	    			全选
+	    		</label>
+	    	</div>
+    		<div class="fr red">
+    			<a class="xq">合计:</a>
+    			<span></span>
+    			<button class="sett">去结算</button>
+    		</div>
+	    </div>
+	     <!--结算-->
+	     <!--删除-->
+	    <!--<div class="bottom fixed" style="display: none;">
+    		<div class="fr">
+    			<button class="delete">删除</button>
+    		</div>
+	    </div>-->
+	     <!--删除-->
+	     <!--弹框-->
+	    <!--<div class="text1 fixed">
+	    	<form>
+	    		<input type="number"/>
+	    		<input type="button"  value="确定"/>
+	    	</form>
+	    </div>-->
+	     <!--弹框-->
+	    <!--弹框2-->
+	    <!--<div class="alert fixed"></div>-->
+	     <!--弹框2-->
+		<script src="js/web.js"></script>
+		<!--<script src="js/zepto.js"></script>-->
+		<script src="js/index.js"></script>
+		
+		<!--底部导航栏-->
+		<div id="footer"></div>
+	</body>
+	<script>
+		
+
+	</script>
+</html>

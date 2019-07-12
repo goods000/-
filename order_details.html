@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>详细信息</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<script src="js/swiper.min.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/font.css" />
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/swiper.css">
+	</head>
+	<style>
+		.xuan {
+			background: #FFA232;
+			color: #FFFFFF;
+			font-size: 16px;
+		}
+		.r{color: #FFA232;margin: 0px 10px;}
+		.gw{width: 100vw;height:100vh;background:rgba(0,0,0,0.5);position: fixed;z-index: 10000;top:100vh;}
+		.zf_z .slgm .join-money1{box-sizing: border-box;width: 40px;}
+	</style>
+
+	<body>
+		<h1 class="h1"><button class="iconfont icon-xiangzuo1" onclick="javascript:window.history.back(-1);"></button>详细信息</h1>
+
+		<div class="swiper-container" style="margin-top: 45px;">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="img/login_di.png" /></div>
+				<div class="swiper-slide"><img src="img/o_address.png" /></div>
+				<div class="swiper-slide"><img src="img/geHeader.png" /></div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+			<!-- Add Arrows -->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		</div>
+		<div class="xxy_content">
+			<h6>零食大礼包会很久首都航空水电费看见首付款较好的冯绍峰撒东方闪电</h6>
+			<span>价格：1980</span>
+			<dl>
+				<dd>库存：188件</dd>
+				<dd>月销：50件</dd>
+			</dl>
+		</div>
+		<div class="xxy_xx">
+			<h6><s class="r">—</s>详情<s class="r">—</s></h6>
+			<img src="img/loginBg.png" />
+		</div>
+		<div class="dibu1">
+			<a href="index.html">
+				<img src="img/dp.png" class="dp_img" />
+				<p>首页</p>
+			</a>
+			<a href="shoppingCar.html">
+				<img src="img/car.png" class="dp_img"/>
+			</a>
+			<a><span class="jr">加入购物车</span></a>
+			<a style="margin-right: 10px;"><span class="gm">立即购买</span></a>
+		</div>
+
+		<div class="zf">
+			<div class="zf_z">
+				<i>
+    				<img src="img/goos.png"/>
+					
+    			</i>
+				<div class="gw_j">
+					<span class="price jl">
+							<u>￥</u>167
+						</span>
+					<p class="gw_k">库存:1024件</p>
+					<p class="gw_x">选择规格,数量等分类</p>
+				</div>
+				<div class="zf_right">
+
+					<a href="#" class="gb"><img src="img/gb.png" /></a>
+
+					<div class="gui">
+						<p class="gTitle">规格</p>
+						<div class="guiBox">
+							<p class="gg">
+								250g
+							</p>
+							<p class="gg">
+								500g
+								</span>
+								<p class="gg">
+									1000g
+								</p>
+								<p class="gg">
+									1000g
+								</p>
+								<p class="gg">
+									1000g
+								</p>
+								<p class="gg">
+									1000g
+								</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="slgm">
+					<span>购买数量</span>
+					<input class="addBtn add" type="button" value="+" />
+					<input class="join-money" type="text" value="1">
+					<input class="addBtn min" type="button" value="-" />
+
+				</div>
+				<a href="order_buy.html">确认</a>
+			</div>
+		</div>	
+		
+		<div class="gw">
+			<div class="zf_z">
+				<i>
+    				<img src="img/goos.png"/>
+					
+    			</i>
+				<div class="gw_j">
+					<span class="price jl">
+							<u>￥</u>167
+						</span>
+					<p class="gw_k">库存:1024件</p>
+					<p class="gw_x">选择规格,数量等分类</p>
+				</div>
+				<div class="zf_right">
+
+					<a class="gb1"><img src="img/gb.png" /></a>
+
+					<div class="gui">
+						<p class="gTitle">规格</p>
+						<div class="guiBox">
+							<p class="gg">
+								250g
+							</p>
+							<p class="gg">
+								500g
+								</span>
+								<p class="gg">
+									1000g
+								</p>
+								<p class="gg">
+									1000g
+								</p>
+								<p class="gg">
+									1000g
+								</p>
+								<p class="gg">
+									1000g
+								</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="slgm">
+					<span>购买数量</span>
+					<input class="addBtn add1" type="button" value="+" />
+					<input class="join-money1" type="text" value="1">
+					<input class="addBtn min1" type="button" value="-" />
+
+				</div>
+				<a href="#">加入购物车</a>
+			</div>
+		</div>	
+				
+				<script>
+					$(".guiBox").each(function() {
+						$(this).find("p").first().addClass("xuan");
+					});
+
+					var $div_li = $('.guiBox p');
+					$('.guiBox p').click(function() {
+						$(this).addClass("xuan").siblings().removeClass("xuan");
+
+					})
+
+					var t = $(".join-money");
+					var m = $(".allMoney").text();
+					var mm = $(".allMoney");
+					$(function() {
+						$(".add").click(function() {
+							t.val(parseInt(t.val()) + 1); //点击加号输入框数值加1
+						});
+						$(".min").click(function() {
+							t.val(parseInt(t.val()) - 1); //点击减号输入框数值减1
+							if(t.val() <= 0) {
+								t.val(parseInt(t.val()) + 1); //最小值为1
+							}
+						});
+					});
+					var t1 = $(".join-money1");
+					var m = $(".allMoney").text();
+					var mm = $(".allMoney");
+					$(function() {
+						$(".add1").click(function() {
+							t1.val(parseInt(t1.val()) + 1); //点击加号输入框数值加1
+						});
+						$(".min1").click(function() {
+							t1.val(parseInt(t1.val()) - 1); //点击减号输入框数值减1
+							if(t1.val() <= 0) {
+								t1.val(parseInt(t1.val()) + 1); //最小值为1
+							}
+						});
+					});
+
+					$(document).ready(function() {
+						$(".gm").click(function() {
+							$(".zf").animate({
+								top: '0px'
+							})
+						});
+						$(".gb").click(function() {
+							$(".zf").animate({
+								top: '100vh'
+							})
+						});
+					});
+					$(document).ready(function() {
+						$(".jr").click(function() {
+							$(".gw").animate({
+								top: '0px'
+							})
+						});
+						$(".gb1").click(function() {
+							$(".gw").animate({
+								top: '100vh'
+							})
+						});
+					});
+
+					var swiper = new Swiper('.swiper-container', {
+						pagination: '.swiper-pagination',
+						nextButton: '.swiper-button-next',
+						prevButton: '.swiper-button-prev',
+						slidesPerView: 1,
+						paginationClickable: true,
+						loop: true,
+						autoplay: 3500,
+						autoplayDisableOnInteraction: false
+
+					});
+				</script>
+	</body>
+
+</html>

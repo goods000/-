@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>我的</title>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/public.js"></script>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<style>
+		.bottom_nav dl dd:nth-child(5) a .dier {
+			display: block !important;
+		}
+		.bottom_nav dl dd:nth-child(5) a .diyi {
+			display: none !important;
+		}
+		.bottom_nav dl dd:nth-child(5) a span {
+			color: #FF7918;
+		}
+		.touImg{border: 1px solid #FA8026;background: #FF7918;width: 55px;height: 55px;border-radius: 30px;margin-left: 15px;}
+	</style>
+
+	<body style="background-color: #f6f6f6;">
+		<!--头部-->
+		<div>
+			<div id="geHeader">
+				<p>商家端</p>
+				<div id="geNews" style="background: url(img/sj_bg.png) no-repeat;background-size:100% 100% ; height: 210px;margin-top: 48px;">
+					<div class="ge_top">
+						<div class="name_top">
+						<div class="right1">
+	                         <img src="img/sj_img.png" class="s_img"/>
+                        	<div class="sj">
+                        		<span class="sj_m">商家名称</span>
+                        		<span class="sj_time">入驻时间:2019-05-20 1:07</span>
+                        	</div>
+						</div>
+					</div>
+					
+					<div class="name_right">
+						<a href="shangjia_order.html?type=1" class="right_img">
+							<img src="img/sj_1.png" class="ge_img" />
+							<span class="right_title">
+								全部订单
+							</span>
+						</a>
+						<a href="shangjia_order.html?type=2" class="right_img">
+							<img src="img/sj_2.png" class="ge_img" />
+							<span class="right_title">
+								待发货
+							</span>
+						</a>
+						<a href="shangjia_order.html?type=3" class="right_img">
+							<img src="img/sj_3.png" class="ge_img" />
+							<span class="right_title">
+								已完成
+							</span>
+						</a>
+						<a href="shangjia_order.html?type=4" class="right_img">
+							<img src="img/sj_4.png" class="ge_img" />
+							<span class="right_title">
+								已发货
+							</span>
+						</a>
+					</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="ge_list sj_list">
+			<div class="list">
+				<div class="list_left">
+					<img src="img/quan.png" class="tups_img"/>
+					<span class="zi">
+						消费券
+					</span>
+					<span class="price" style="padding-left: 20px;">1200</span>
+				</div>
+				<a href="tixian.html" class="tx"><span>提现</span></a>
+			</div>
+			
+		</div>
+		
+		<div class="ge_tab1">
+			<a href="goods_guan.html">
+				<div id="ge_middle">
+					<span class="sj_zi">
+						<img src="img/sp.png" class="ge_img sj_y"/>
+							商品管理
+					</span>
+				</div>
+			</a>	
+		<div class="line"></div>		
+		<div class="ge_nav">
+			<a href="goods_guan.html?type=1" class="tups">
+				<img src="img/sj_11.png" class="tups_img"/>
+				<span class="tups_title">
+					销售中
+				</span>
+			</a>
+			<a href="goods_guan.html?type=2" class="tups">
+				<img src="img/sj_22.png" class="tups_img"/>
+				<span class="tups_title">
+					已下架
+				</span>
+			</a>
+			<a href="goods_guan.html?type=3" class="tups">
+				<img src="img/sj_33.png" class="tups_img"/>
+				<span class="tups_title">
+					审核中
+				</span>
+			</a>
+			<a href="goods_bian.html" class="tups">
+				<img src="img/sj_44.png" class="tups_img"/>
+				<span class="tups_title">
+					添加商品
+				</span>
+			</a>
+		</div>
+		</div>
+	
+		<div id="ge_btn">
+			<input type="button" class="tuichu" onclick="javascript:window.history.back(-1);" value="放回消费端" />
+		</div>
+		
+	</body>
+	<script>
+		function xmTanUploadImg_1(obj) {
+        var file = obj.files[0];
+		console.log(obj);console.log(file);
+		console.log("file.size = " + file.size); //file.size 单位为byte
+		var reader = new FileReader();
+		//读取文件过程方法
+		reader.onloadstart = function (e) {
+		console.log("开始读取....");
+		}
+		reader.onprogress = function (e) {
+		console.log("正在读取中....");
+		}
+		reader.onabort = function (e) {
+		console.log("中断读取....");
+		}
+		reader.onerror = function (e) {
+		console.log("读取异常....");
+		}
+		reader.onload = function (e) {
+		console.log("成功读取....");
+		var size = file.size/1024;
+		var size = size/1024;
+		if (size>4) {
+		alert('上传图片不能超过4MB，请重新选择！');return false;
+		}
+		var img = document.getElementById("xmTanImg_1");
+		img.src = e.target.result;
+		//或者 img.src = this.result; //e.target == this
+		}
+		reader.readAsDataURL(file)
+		}
+	</script>
+</html>

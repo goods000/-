@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title>商品编辑</title>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<link rel="stylesheet" href="css/style.css" />
+    	<link rel="stylesheet" href="css/font.css" />
+	</head>
+	<body style="background: #f5f5f5;">
+		<!--头部标题-->
+		<h1 class="h1">
+			<button class="iconfont icon-xiangzuo1" onclick="javascript:window.history.back(-1);"></button>
+			商品编辑
+		</h1>
+		
+		<div style="background: #FFFFFF;">
+			<div class="g_title">
+				商品图<span class="g_t">(最多上传5张图片)</span>
+			</div>
+		</div>
+		<div class="g_box">
+			<div class="g_tu">
+				<input type="hidden" id="uploadOrderid" name="id" value="">
+				<a style="display: block;background:url(img/o_pz.png);background-size:100% 100%;width:90px;height:90px;position: relative;" href="javascript:;" class="a-upload">
+					<span class="d_it1 g1">
+						添加商品图片
+					</span>
+					<input type="file" name="file1" id="xdaTanFileImg_1" style="width:90px;height:90px;opacity:0;position:absolute;z-index:2;left: 0px;top: 0px;" onchange="xmTanUploadImg_1(this)" accept="image/*" />
+					<i style="position:absolute;top:0px;left:0px;width:90px;height:90px;overflow:hidden;z-index:1;"><img style="width: 100%;display:block;" id="xmTanImg_1"/></i>
+					<div style="width: 90px;height: 90px;margin-top: -21px;" id="xmTanDiv_1"></div>
+				</a>
+			</div>
+			<div class="g_tu">
+				<input type="hidden" id="uploadOrderid" name="id" value="">
+				<a style="display: block;background:url(img/o_pz.png);background-size:100% 100%;width:90px;height:90px;position: relative;" href="javascript:;" class="a-upload">
+					<span class="d_it1 g2">
+						添加商品图片
+					</span>
+					<input type="file" name="file1" id="xdaTanFileImg_1" style="width:90px;height:90px;opacity:0;position:absolute;z-index:2;left: 0px;top: 0px;" onchange="xmTanUploadImg_2(this)" accept="image/*" />
+					<i style="position:absolute;top:0px;left:0px;width:90px;height:90px;overflow:hidden;z-index:1;"><img style="width: 100%;display:block;" id="xmTanImg_2"/></i>
+					<div style="width: 90px;height: 90px;margin-top: -21px;" id="xmTanDiv_2"></div>
+				</a>
+			</div>
+			<div class="g_tu">
+				<input type="hidden" id="uploadOrderid" name="id" value="">
+				<a style="display: block;background:url(img/o_pz.png);background-size:100% 100%;width:90px;height:90px;position: relative;" href="javascript:;" class="a-upload">
+					<span class="d_it1 g3">
+						添加商品图片
+					</span>
+					<input type="file" name="file1" id="xdaTanFileImg_1" style="width:90px;height:90px;opacity:0;position:absolute;z-index:2;left: 0px;top: 0px;" onchange="xmTanUploadImg_3(this)" accept="image/*" />
+					<i style="position:absolute;top:0px;left:0px;width:90px;height:90px;overflow:hidden;z-index:1;"><img style="width: 100%;display:block;" id="xmTanImg_3"/></i>
+					<div style="width: 90px;height: 90px;margin-top: -21px;" id="xmTanDiv_3"></div>
+				</a>
+			</div>
+			<div class="g_tu">
+				<input type="hidden" id="uploadOrderid" name="id" value="">
+				<a style="display: block;background:url(img/o_pz.png);background-size:100% 100%;width:90px;height:90px;position: relative;" href="javascript:;" class="a-upload">
+					<span class="d_it1 g4">
+						添加商品图片
+					</span>
+					<input type="file" name="file1" id="xdaTanFileImg_1" style="width:90px;height:90px;opacity:0;position:absolute;z-index:2;left: 0px;top: 0px;" onchange="xmTanUploadImg_4(this)" accept="image/*" />
+					<i style="position:absolute;top:0px;left:0px;width:90px;height:90px;overflow:hidden;z-index:1;"><img style="width: 100%;display:block;" id="xmTanImg_4"/></i>
+					<div style="width: 90px;height: 90px;margin-top: -21px;" id="xmTanDiv_4"></div>
+				</a>
+			</div>
+			<div class="g_tu">
+				<input type="hidden" id="uploadOrderid" name="id" value="">
+				<a style="display: block;background:url(img/o_pz.png);background-size:100% 100%;width:90px;height:90px;position: relative;" href="javascript:;" class="a-upload">
+					<span class="d_it1 g5">
+						添加商品图片
+					</span>
+					<input type="file" name="file1" id="xdaTanFileImg_1" style="width:90px;height:90px;opacity:0;position:absolute;z-index:2;left: 0px;top: 0px;" onchange="xmTanUploadImg_5(this)" accept="image/*" />
+					<i style="position:absolute;top:0px;left:0px;width:90px;height:90px;overflow:hidden;z-index:1;"><img style="width: 100%;display:block;" id="xmTanImg_5"/></i>
+					<div style="width: 90px;height: 90px;margin-top: -21px;" id="xmTanDiv_5"></div>
+				</a>
+			</div>
+		</div>
+		
+		<div class="g_input">
+			<label>商品标题</label>
+			<input type="text" placeholder="输入商品介绍标题等" class="g_txt" name="" id="" value="" />
+		</div>
+		<div class="g_input">
+			<label>商品详情<span class="g_t">(最多上传5张图片)</span></label>
+			<div class="g_tu1">
+				<input type="hidden" id="uploadOrderid" name="id" value="">
+				<a style="display: block;background:url(img/sc.png);background-size:100% 100%;width:90px;height:90px;position: relative;" href="javascript:;" class="a-upload">
+					<span class="d_it2 g6">
+						添加详情图
+					</span>
+					<input type="file" name="file1" id="xdaTanFileImg_1" style="width:90px;height:90px;opacity:0;position:absolute;z-index:2;left: 0px;top: 0px;" onchange="xmTanUploadImg_6(this)" accept="image/*" />
+					<i style="position:absolute;top:0px;left:0px;width:90px;height:90px;overflow:hidden;z-index:1;"><img style="width: 100%;display:block;" id="xmTanImg_6"/></i>
+					<div style="width: 90px;height: 90px;margin-top: -21px;" id="xmTanDiv_6"></div>
+				</a>
+			</div>
+		</div>
+		
+		<div class="g_it">
+			<label>商品标题</label>
+			<input type="text" class="p_p price" name="" id="" value="￥288" />
+		</div>
+		<div class="g_it">
+			<label>商品原价<span class="xuant">(选填)</span></label>
+			<input type="text" class="p_p" name="" id="" value="￥388" />
+		</div>
+		<div class="g_input">
+			<label>商品库存</label>
+			<input type="text" placeholder="输入库存数量" class="g_txt" name="" id="" value="" />
+		</div>
+		<div class="g_it">
+			<label>商品分类</label>
+			<div class="">
+				<select name="">
+					<option value="">家具百货</option>
+					<option value="">家用电器</option>
+				</select>
+				<img src="img/next.png" class="tups_img"/>
+			</div>
+		</div>
+		<div class="g_input">
+			<p class="warn">
+				<img src="img/warn.png" class="dian_img"/>
+				注意:
+			</p>
+			<p class="warn">1.商品价格、库存、规格信息可直接修改。</p>
+			<p class="warn">2.修改商品图片、商品图标、商品详情则需要重新进行审核。</p>
+			<p class="warn">3.已经上架的商品再次审核会默认为下架状态。</p>
+			
+			<div id="ge_btn">
+				<input type="button" class="tuichu" value="确认修改" />
+			</div>
+			
+		</div>
+		
+	</body>
+	<script>
+		function xmTanUploadImg_1(obj) {
+	        var file = obj.files[0];
+			console.log(obj);console.log(file);
+			console.log("file.size = " + file.size); //file.size 单位为byte
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				var size = file.size/1024;
+				var size = size/1024;
+				if (size>4) {
+				alert('上传图片不能超过4MB，请重新选择！');return false;
+				}
+				var img = document.getElementById("xmTanImg_1");
+				img.src = e.target.result;
+				$(".g1").css("visibility","hidden")
+				//或者 img.src = this.result; //e.target == this
+				}
+				reader.readAsDataURL(file)
+			}
+		
+		function xmTanUploadImg_2(obj) {
+	        var file = obj.files[0];
+			console.log(obj);console.log(file);
+			console.log("file.size = " + file.size); //file.size 单位为byte
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				var size = file.size/1024;
+				var size = size/1024;
+				if (size>4) {
+				alert('上传图片不能超过4MB，请重新选择！');return false;
+				}
+				var img = document.getElementById("xmTanImg_2");
+				img.src = e.target.result;
+				$(".g2").css("visibility","hidden")
+				//或者 img.src = this.result; //e.target == this
+				}
+				reader.readAsDataURL(file)
+			}
+		
+		function xmTanUploadImg_3(obj) {
+	        var file = obj.files[0];
+			console.log(obj);console.log(file);
+			console.log("file.size = " + file.size); //file.size 单位为byte
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				var size = file.size/1024;
+				var size = size/1024;
+				if (size>4) {
+				alert('上传图片不能超过4MB，请重新选择！');return false;
+				}
+				var img = document.getElementById("xmTanImg_3");
+				img.src = e.target.result;
+				$(".g3").css("visibility","hidden")
+				//或者 img.src = this.result; //e.target == this
+				}
+				reader.readAsDataURL(file)
+			}
+		
+		function xmTanUploadImg_4(obj) {
+	        var file = obj.files[0];
+			console.log(obj);console.log(file);
+			console.log("file.size = " + file.size); //file.size 单位为byte
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				var size = file.size/1024;
+				var size = size/1024;
+				if (size>4) {
+				alert('上传图片不能超过4MB，请重新选择！');return false;
+				}
+				var img = document.getElementById("xmTanImg_4");
+				img.src = e.target.result;
+				$(".g4").css("visibility","hidden")
+				//或者 img.src = this.result; //e.target == this
+				}
+				reader.readAsDataURL(file)
+			}
+		
+		function xmTanUploadImg_5(obj) {
+	        var file = obj.files[0];
+			console.log(obj);console.log(file);
+			console.log("file.size = " + file.size); //file.size 单位为byte
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				var size = file.size/1024;
+				var size = size/1024;
+				if (size>4) {
+				alert('上传图片不能超过4MB，请重新选择！');return false;
+				}
+				var img = document.getElementById("xmTanImg_5");
+				img.src = e.target.result;
+				$(".g5").css("visibility","hidden")
+				//或者 img.src = this.result; //e.target == this
+				}
+				reader.readAsDataURL(file)
+			}
+		
+		function xmTanUploadImg_6(obj) {
+	        var file = obj.files[0];
+			console.log(obj);console.log(file);
+			console.log("file.size = " + file.size); //file.size 单位为byte
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				var size = file.size/1024;
+				var size = size/1024;
+				if (size>4) {
+				alert('上传图片不能超过4MB，请重新选择！');return false;
+				}
+				var img = document.getElementById("xmTanImg_6");
+				img.src = e.target.result;
+				$(".g6").css("visibility","hidden")
+				//或者 img.src = this.result; //e.target == this
+				}
+				reader.readAsDataURL(file)
+			}
+	</script>
+</html>

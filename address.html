@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>地址列表</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	    <script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+	    <link rel="stylesheet" href="css/font.css" />
+	    <link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<h1 class="h1"><button class="iconfont icon-xiangzuo1" onclick="javascript:window.history.back(-1);"></button>地址列表</h1>
+		<div class="shdz gt">
+			<ul>
+				<li class="li_sc"><a href="#">
+					<i>姓名：你是个大沙逼</i><em>联系电话：1383838438</em>
+					<p>地址：肯定撒四大皆空大家id洒几滴阿斯顿阿三</p></a>
+					<div class="bjsc">
+						<a href="add_address.html"><i class="iconfont icon-dianping"></i>编辑</a>
+						<a class="sc"><i class="iconfont icon-shanchu"></i>删除</a>
+					</div>
+				</li>
+				<li class="li_sc"><a href="#">
+					<i>姓名：我真的好无聊</i><em>联系电话：1383838438</em>
+					<p>地址：担惊受恐扣扣奇偶结果就三</p></a>
+					<div class="bjsc">
+						<a href="add_address.html"><i class="iconfont icon-dianping"></i>编辑</a>
+						<a class="sc"><i class="iconfont icon-shanchu"></i>删除</a>
+					</div>
+				</li>
+			</ul>
+			<a class="xzdz" href="add_address.html">新增地址</a>
+			
+		</div>
+		<script>
+//			$(document).ready(function(){
+//				$(".sc").click(function(){
+//					$(".li_sc").remove();
+//				})
+//			})
+	
+			$(".sc").click(function(){
+				$(this).parent().parent().remove();				
+			});
+
+		</script>
+	</dody>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>充值功能</title>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/public.js"></script>
+		<link rel="stylesheet" href="css/style.css" />
+    	<link rel="stylesheet" href="css/font.css" />
+	</head>
+	<body style="background: #f5f5f5;">
+		<!--头部标题-->
+		<h1 class="h1">
+			<button class="iconfont icon-xiangzuo1" onclick="javascript:window.history.back(-1);"></button>
+			充值功能
+		</h1>
+
+		<div class="inputBox gt">
+			<div class="gorup">
+				<span class="inputTitle sbb">
+					USDT:
+				</span>
+				<span class="order_price sll">
+					6660.66
+				</span>
+			</div>
+			<div class="gorup">
+				<span class="sbb">
+					收币方
+				</span>
+				<input type="" class="sll" name="address" id="address" value="地址地址地址地址地址地址地址地址地址" />
+				<!--<span class="sll" id="address">
+					地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址
+				</span>-->
+				<!--<textarea style="display: none" id="input" /></textarea>-->
+				<span id="btn" onclick="copyText()">
+					点击复制
+				</span>
+			</div>
+			<div class="gorup_img">
+				<span class="inputTitle sbb">
+					收币二维码
+				</span>
+				<img src="img/login_tu.png" class="shou_img"/>
+			</div>
+			<div class="gorup">
+				<span class="inputTitle sbb">
+					充值数量
+				</span>
+				<img src="img/U_warn.png" class="dian_img sll"/>
+			</div>	
+			<div class="gorup">
+				<span class="inputTitle1">
+					￥
+				</span>
+				<input type="text" placeholder="请输入数量" name="" id="" value="" />
+			</div>
+			<div class="gorup">
+				<span class="inputTitle sbb">
+					输入转币地址
+				</span>
+				<input type="text" name="" id="z_address" value="" />
+			</div>
+			<div class="gorup">
+				<span class="inputTitle sbb">
+					输入充值密码
+				</span>
+				<input type="text" name="" id="password" value="" />
+			</div>
+			<div class="gorup_img">
+				<span class="inputTitle sbb">
+					上传转币凭证
+				</span>
+				<span class="rz_yy">
+					<input type="hidden" id="uploadOrderid" name="id" value="">
+					<a style="display: block;border:1px dashed #dbdbdb;text-align: center;width:100px;height:100px;position: relative;" href="javascript:;" class="a-upload">
+						<span class="rz_zi">+</span>
+						<input type="file" name="file1" id="xdaTanFileImg_1" style="width:100px;height:100px;opacity:0;position:absolute;z-index:2;left: 0px;top: 0px;" onchange="xmTanUploadImg_1(this)" accept="image/*" />
+						<i style="position:absolute;top:0px;left:0px;width:100px;height:100px;overflow:hidden;z-index:1;"><img style="width: 100%;display:block;" id="xmTanImg_1"/></i>
+						<div style="width: 100px;height: 100px;margin-top: -21px;" id="xmTanDiv_1"></div>
+					</a>
+				</span>
+			</div>
+			
+		</div>
+			
+			<div id="yz_btn">
+				<input type="button" class="yzbutton" value="确认充值" />
+			</div>
+
+
+	</body>
+<script type="text/javascript">
+	 function copyText() {
+//		   var text = document.getElementById("address").innerText;
+		   var input = document.getElementById("address");
+//		   input.value = text;
+		   input.select(); // 选中文本
+		   document.execCommand("Copy"); // 执行浏览器复制命令
+		   alert("复制成功");
+  	}
+	
+	function xmTanUploadImg_1(obj) {
+        var file = obj.files[0];
+		console.log(obj);console.log(file);
+		console.log("file.size = " + file.size); //file.size 单位为byte
+		var reader = new FileReader();
+		//读取文件过程方法
+		reader.onload = function (e) {
+		console.log("成功读取....");
+		var size = file.size/1024;
+		var size = size/1024;
+		if (size>4) {
+		alert('上传图片不能超过4MB，请重新选择！');return false;
+		}
+		var img = document.getElementById("xmTanImg_1");
+		img.src = e.target.result;
+		$(".rz_zi").hide();
+		//或者 img.src = this.result; //e.target == this
+		}
+		reader.readAsDataURL(file)
+		}
+</script>
+</html>

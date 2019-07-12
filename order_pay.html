@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>订单凭证</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="css/font.css" />
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body style="background: #f5f5f5;">
+		<h1 class="h1">
+			<button class="iconfont icon-xiangzuo1" onclick="javascript:window.history.back(-1);"></button>
+				支付方式
+			<a href="#" class="headerRight">支付记录</a>
+		</h1>
+		<div class="pay_top">
+			请选择支付方式
+		</div>
+		
+		<div class="pay_ways">
+			<div class="p_a">
+				<div class="pay_zi">
+					<img src="img/Alipay.png" class="ge_img"/>
+					<span class="pz">支付宝支付</span>
+				</div>
+				<img src="img/noChoice.png" class="tups_img"/>
+			</div>
+			<div class="p_a">
+				<div class="pay_zi">
+					<img src="img/xpay.png" class="ge_img"/>
+					<span class="pz">线下支付</span>
+				</div>
+				<img src="img/noChoice.png" class="tups_img"/>
+			</div>
+			<div class="p_a">
+				<div class="pay_zi">
+					<img src="img/barkpay.png" class="ge_img"/>
+					<span class="pz">快捷支付</span>
+				</div>
+				<img src="img/noChoice.png" class="tups_img"/>
+			</div>
+		</div>
+		
+		<div class="pay_ways">
+			<div class="p_a">
+					<span class="pay_ti">支付金额</span>
+			</div>
+				<div class="pay_inputBox">
+					<label>￥</label>
+					<input type="text" placeholder="请输入支付的金额" name="" id="" class="pay_input" />
+				</div>
+		</div>
+		
+		
+		<div id="ge_btn">
+			<input type="button" class="tuichu" value="立即充值" />
+		</div>
+		
+	</body>
+	<script>
+		var toggle = true;
+		$(".p_a").each(function() {
+			$(this).find("img").click(function() {
+				if(toggle) {
+					$(this).attr("src", "img/zhengque.png").parent().siblings().find(".tups_img").attr("src", "img/noChoice.png")
+					toggle = false;
+				} else {
+					$(this).attr("src", "img/zhengque.png").parent().siblings().find(".tups_img").attr("src", "img/noChoice.png")
+					toggle = true;
+				}
+			});
+		});
+		
+//		var toggle = true;
+//		$(".tups_img").click(function() {
+//			if(toggle) {
+//				$(this).attr("src", "img/zhengque.png");
+//				toggle = false;
+//			} else {
+//				$(this).attr("src", "img/noChoice.png")
+//				toggle = true;
+//			}
+//		});
+	</script>
+</html>

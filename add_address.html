@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>收货地址</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<h1 class="h1"><button class="iconfont icon-xiangzuo1" onclick="javascript:window.history.back(-1);"></button>收货地址</h1>
+		<div class="dzgg gt">
+			
+			<ul>
+				<li><input type="text" placeholder="收货人" /></li>
+				<li><input type="text" placeholder="联系电话" /></li>
+				<li><input type="text" placeholder="邮编" /></li>
+				<li><div class="outer">
+					<select name="province" id="province">
+						<option value="请选择">请选择</option>
+					</select>
+					<select name="city" id="city">
+						<option value="请选择">请选择</option>
+					</select>
+					<select name="town" id="area">
+						<option value="请选择">请选择</option>
+					</select>
+				</div></li>
+				<li><textarea type="text" placeholder="详细地址"></textarea></li>
+			</ul>
+			<a href="#" class="tiijiao">保存</a>
+		</div>
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/area.js"></script>
+		<script src="js/select.js"></script>
+	</body>
+</html>

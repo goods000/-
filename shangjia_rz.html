@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>商家入驻</title>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/public.js"></script>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/font.css" />
+	</head>
+	<body style="background: #FFFFFF;">
+		<h1 class="h1"><button class="iconfont icon-xiangzuo1" onclick="javascript:window.history.back(-1);"></button>商家入驻</h1>
+		<div class="sj_form" style="margin-top: 55px;">
+			<label>
+				<ul>
+					<li><span>公司名称</span></li>
+				</ul>
+			</label>
+			<input type="text" placeholder="请输入公司名称" name="" id="" value="" />
+		</div>
+		<div class="sj_form">
+			<label>
+				<ul>
+					<li><span>营业执照</span></li>
+				</ul>
+			</label>
+			<div class="rz_box">
+				<span class="rz_yy">
+					<input type="hidden" id="uploadOrderid" name="id" value="">
+					<a style="display: block;border:1px dashed #dbdbdb;text-align: center;width:100px;height:100px;position: relative;" href="javascript:;" class="a-upload">
+						<span class="rz_zi">+</span>
+						<input type="file" name="file1" id="xdaTanFileImg_1" style="width:100px;height:100px;opacity:0;position:absolute;z-index:2;left: 0px;top: 0px;" onchange="xmTanUploadImg_1(this)" accept="image/*" />
+						<i style="position:absolute;top:0px;left:0px;width:100px;height:100px;overflow:hidden;z-index:1;"><img style="width: 100%;display:block;" id="xmTanImg_1"/></i>
+						<div style="width: 100px;height: 100px;margin-top: -21px;" id="xmTanDiv_1"></div>
+					</a>
+				</span>
+				<span class="rz_yy">
+					<input type="hidden" id="uploadOrderid" name="id" value="">
+					<a style="display: block;border:1px dashed #dbdbdb;text-align: center;width:100px;height:100px;position: relative;" href="javascript:;" class="a-upload">
+						<span class="rz_zi2">+</span>
+						<input type="file" name="file1" id="xdaTanFileImg_2" style="width:100px;height:100px;opacity:0;position:absolute;z-index:2;left: 0px;top: 0px;" onchange="xmTanUploadImg_2(this)" accept="image/*" />
+						<i style="position:absolute;top:0px;left:0px;width:100px;height:100px;overflow:hidden;z-index:1;"><img style="width: 100%;display:block;" id="xmTanImg_2"/></i>
+						<div style="width: 100px;height: 100px;margin-top: -21px;" id="xmTanDiv_2"></div>
+					</a>
+				</span>
+			</div>
+		</div>
+		<div class="sj_form">
+			<label>
+				<ul>
+					<li><span>本人名字</span></li>
+				</ul>
+			</label>
+			<input type="text" placeholder="请输入您的名字" name="" id="" value="" />
+		</div>
+		<div class="sj_form">
+			<label>
+				<ul>
+					<li><span>本人身份证</span></li>
+				</ul>
+			</label>
+			<input type="text" placeholder="请输入您的身份证号码" name="" id="" value="" />
+		</div>
+		<div class="sj_form">
+			<label>
+				<ul>
+					<li><span>身份证正反面照片</span></li>
+				</ul>
+			</label>
+			<div class="">
+				<div style="margin: 0px 0px 15px 0px;">
+					<input type="hidden" id="uploadOrderid" name="id" value="">
+					<a style="display: block;background:url(img/sj_yz.png);background-size:100% 100%;width:200px;height:120px;position: relative;" href="javascript:;" class="a-upload">
+						<span class="rz_it">
+							请放入身份证正面
+						</span>
+						<input type="file" name="file1" id="xdaTanFileImg_3" style="width:200px;height:120px;opacity:0;position:absolute;z-index:2;left: 0px;top: 0px;" onchange="xmTanUploadImg_3(this)" accept="image/*" />
+						<i style="position:absolute;top:0px;left:0px;width:200px;height:120px;overflow:hidden;z-index:1;"><img style="width: 100%;display:block;" id="xmTanImg_3"/></i>
+						<div style="width: 200px;height: 120px;margin-top: -21px;" id="xmTanDiv_3"></div>
+					</a>
+				</div>
+				<div class="">
+					<input type="hidden" id="uploadOrderid" name="id" value="">
+					<a style="display: block;background:url(img/sj_yz.png);background-size:100% 100%;width:200px;height:120px;position: relative;" href="javascript:;" class="a-upload">
+						<span class="rz_it1">
+							请放入身份证反面
+						</span>
+						<input type="file" name="file1" id="xdaTanFileImg_4" style="width:200px;height:120px;opacity:0;position:absolute;z-index:2;left: 0px;top: 0px;" onchange="xmTanUploadImg_4(this)" accept="image/*" />
+						<i style="position:absolute;top:0px;left:0px;width:200px;height:120px;overflow:hidden;z-index:1;"><img style="width: 100%;display:block;" id="xmTanImg_4"/></i>
+						<div style="width: 200px;height: 120px;margin-top: -21px;" id="xmTanDiv_4"></div>
+					</a>
+				</div>
+			</div>
+		</div>
+		
+		<div id="ge_btn">
+			<input type="button" class="tuichu" value="提交审核" />
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		function xmTanUploadImg_1(obj) {
+        var file = obj.files[0];
+		console.log(obj);console.log(file);
+		console.log("file.size = " + file.size); //file.size 单位为byte
+		var reader = new FileReader();
+		//读取文件过程方法
+		reader.onload = function (e) {
+		console.log("成功读取....");
+		var size = file.size/1024;
+		var size = size/1024;
+		if (size>4) {
+		alert('上传图片不能超过4MB，请重新选择！');return false;
+		}
+		var img = document.getElementById("xmTanImg_1");
+		img.src = e.target.result;
+		$(".rz_zi").hide();
+		//或者 img.src = this.result; //e.target == this
+		}
+		reader.readAsDataURL(file)
+		}
+		
+		function xmTanUploadImg_2(obj) {
+        var file = obj.files[0];
+		console.log(obj);console.log(file);
+		console.log("file.size = " + file.size); //file.size 单位为byte
+		var reader = new FileReader();
+		//读取文件过程方法
+		reader.onload = function (e) {
+		console.log("成功读取....");
+		var size = file.size/1024;
+		var size = size/1024;
+		if (size>4) {
+		alert('上传图片不能超过4MB，请重新选择！');return false;
+		}
+		var img = document.getElementById("xmTanImg_2");
+		img.src = e.target.result;
+		$(".rz_zi2").hide();
+		//或者 img.src = this.result; //e.target == this
+		}
+		reader.readAsDataURL(file)
+		}
+		
+		function xmTanUploadImg_3(obj) {
+        var file = obj.files[0];
+		console.log(obj);console.log(file);
+		console.log("file.size = " + file.size); //file.size 单位为byte
+		var reader = new FileReader();
+		//读取文件过程方法
+		reader.onload = function (e) {
+		console.log("成功读取....");
+		var size = file.size/1024;
+		var size = size/1024;
+		if (size>4) {
+		alert('上传图片不能超过4MB，请重新选择！');return false;
+		}
+		var img = document.getElementById("xmTanImg_3");
+		img.src = e.target.result;
+		$(".rz_it").css("visibility","hidden");
+		//或者 img.src = this.result; //e.target == this
+		}
+		reader.readAsDataURL(file)
+		}
+		
+		function xmTanUploadImg_4(obj) {
+        var file = obj.files[0];
+		console.log(obj);console.log(file);
+		console.log("file.size = " + file.size); //file.size 单位为byte
+		var reader = new FileReader();
+		//读取文件过程方法
+		reader.onload = function (e) {
+		console.log("成功读取....");
+		var size = file.size/1024;
+		var size = size/1024;
+		if (size>4) {
+		alert('上传图片不能超过4MB，请重新选择！');return false;
+		}
+		var img = document.getElementById("xmTanImg_4");
+		img.src = e.target.result;
+		$(".rz_it1").css("visibility","hidden");
+		//或者 img.src = this.result; //e.target == this
+		}
+		reader.readAsDataURL(file)
+		}
+	</script>
+</html>
